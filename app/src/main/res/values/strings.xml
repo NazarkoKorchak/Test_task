@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Test_task</string>
+    <string name="title_task_1">Task 1</string>
+    <string name="title_task_2">Task 2</string>
+
+    <string name="title_parse">Parse</string>
+    <string name="word_for_parse_hint">Word for parse</string>
+
+    <string name="title_calculate">Calculate</string>
+    <string name="first_number_hint">First number</string>
+    <string name="second_number_hint">Second number</string>
+</resources>

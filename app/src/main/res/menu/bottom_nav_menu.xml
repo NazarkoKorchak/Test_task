@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_text_parsing"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/title_task_1" />
+
+    <item
+        android:id="@+id/navigation_bit_manipulation"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/title_task_2" />
+
+</menu>

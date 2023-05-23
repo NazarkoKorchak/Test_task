@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_text_parsing">
+
+    <fragment
+        android:id="@+id/navigation_text_parsing"
+        android:name="com.example.test_task.ui.task1.TextParsingFragment"
+        android:label="@string/title_task_1"
+        tools:layout="@layout/fragment_text_parsing" />
+
+    <fragment
+        android:id="@+id/navigation_bit_manipulation"
+        android:name="com.example.test_task.ui.task2.BitManipulationFragment"
+        android:label="@string/title_task_2"
+        tools:layout="@layout/fragment_bit_manipulation" />
+
+</navigation>
