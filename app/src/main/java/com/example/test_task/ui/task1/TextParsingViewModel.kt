@@ -12,18 +12,10 @@ class TextParsingViewModel : ViewModel() {
     private val dictionary: Set<String> = setOf("apple", "pie", "shoe", "second", "secondary")
 
     fun segment(input: String) {
-        val segmentedString = StringBuilder()
+        val segmentedString = dictionary
+            .filter { input.contains(it) }
+            .joinToString(separator = " ")
 
-        dictionary.forEach { word ->
-            if (input.contains(word)) {
-                segmentedString.append("$word ")
-            }
-        }
-
-        if (segmentedString.toString().isNotEmpty()) {
-            _text.value = segmentedString.toString().trim()
-        } else {
-            _text.value = "Can't parse this word"
-        }
+        _text.value = segmentedString.ifEmpty { "Can't parse this word" }
     }
 }

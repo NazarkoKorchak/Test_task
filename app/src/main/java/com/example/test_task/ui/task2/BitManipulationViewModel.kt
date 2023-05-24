@@ -10,16 +10,20 @@ class BitManipulationViewModel : ViewModel() {
     val result: LiveData<String> = _result
 
     fun calculateBitDifference(x: Int?, y: Int?) {
-        var count = 0
-        if (x != null && y != null) {
-            var bitDifference = x xor y
-            while (bitDifference != 0) {
-                count += bitDifference and 1
-                bitDifference = bitDifference shr 1
-            }
-            _result.value = count.toString()
-        } else {
-            _result.value = "Please fill 2 values"
+        if (x == null || y == null) {
+            _result.value = "Please fill both values"
+            return
         }
+
+        _result.value = countSetBits(x xor y).toString()
     }
+
+    /**
+     * logic behind calculation of set bits (1) for provided int number.
+     */
+    private fun countSetBits(number: Int): Int =
+        when (number) {
+            0 -> 0
+            else -> (number and 1) + countSetBits(number shr 1)
+        }
 }
